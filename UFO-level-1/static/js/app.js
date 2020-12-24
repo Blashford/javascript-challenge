@@ -10,6 +10,7 @@ form.on("submit", runEnter);
 button.on("click", runEnter);
 
 function runEnter() {
+    tbody.text("")
     d3.event.preventDefault();
 
     var input = d3.select("#datetime");
