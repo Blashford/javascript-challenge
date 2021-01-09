@@ -9,6 +9,14 @@ var button = d3.select("#filter-btn");
 form.on("submit", runEnter);
 button.on("click", runEnter);
 
+function init() {
+    data.forEach(dicty =>{
+        var row = tbody.append("tr");
+        Object.entries(dicty).forEach(([key, value]) => {
+            row.append("td").text(value);
+        })
+})};
+
 function runEnter() {
     tbody.text("")
     d3.event.preventDefault();
@@ -28,3 +36,5 @@ function runEnter() {
       });
     });
 };
+
+init()
